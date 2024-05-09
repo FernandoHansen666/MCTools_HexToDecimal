@@ -1,4 +1,5 @@
 import sys
+import time
 
 #===============================
 # Para converter facil os Dumps 
@@ -75,6 +76,9 @@ try:
 
 except FileNotFoundError:
    print("Arquivo não encontrado!!")
+   time.sleep(5)
    sys.exit()
 
+print("\n Enter para fechar.")
+pausar = input()
 arquivobin.close
