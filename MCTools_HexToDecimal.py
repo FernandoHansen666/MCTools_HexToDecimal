@@ -15,8 +15,9 @@ print("Digite o nome do arquivo: (O nome deve ser exato e o arquivo deve estar n
 filename = input()
 
 if os.path.exists(filename):
-    print("Arquivo encontrado! (Output.txt gerado!)")
-    time.sleep(2)
+    print("Arquivo encontrado! (Gerando Output.txt!)")
+    time.sleep(1)
+    print("Output Gerado!")
 else:
     print("O arquivo não existe.")
 
