@@ -16,7 +16,7 @@ filename = input()
 
 if os.path.exists(filename):
     print("Arquivo encontrado! (Output.txt gerado!)")
-    time.sleep(5)
+    time.sleep(2)
 else:
     print("O arquivo não existe.")
 
