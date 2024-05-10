@@ -1,5 +1,7 @@
 import sys
 import time
+from pathlib import Path
+import os
 
 #===============================
 # Para converter facil os Dumps 
@@ -12,7 +14,18 @@ import time
 print("Digite o nome do arquivo: (O nome deve ser exato e o arquivo deve estar no mesmo diretorio deste programa!)")
 filename = input()
 
+if os.path.exists(filename):
+    print("Arquivo encontrado! (Output.txt gerado!)")
+    time.sleep(5)
+else:
+    print("O arquivo não existe.")
+
+
+
+
 try:
+ with open("Output.txt", 'w') as out:
+   sys.stdout = out
    with open(filename, 'r') as arquivobin: #leitura de BIN
     countline = 0
     pularlinhas = 0
@@ -50,7 +63,7 @@ try:
                   pointer4 = pointer
                   print("Hex:", pointer4, pointer3, pointer2, pointer1, end=" Dec:", sep="") #imprime em HEX
                   hexfull = pointer4 + pointer3 + pointer2 + pointer1                 
-                  decimal = int(hexfull, 16) #conversão para decimal
+                  decimal = int(hexfull, 16) #conversão para decimal                
                   print(decimal, end="")
                   pularlinhas += 1
                   
@@ -75,10 +88,10 @@ try:
                 caracterant = None
 
 except FileNotFoundError:
-   print("Arquivo não encontrado!!")
-   time.sleep(5)
+   #print("Arquivo não encontrado!!")
+   time.sleep(8)
    sys.exit()
 
-print("\n Enter para fechar.")
 pausar = input()
 arquivobin.close
+out.close
