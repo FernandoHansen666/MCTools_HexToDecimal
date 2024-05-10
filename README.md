@@ -33,6 +33,9 @@ Este script em Python facilita a decodificação de arquivos de Dumps Mifare obt
 - Este script é projetado para funcionar com arquivos de Dump Mifare obtidos da Mifare Classic Tools, após a extração das chaves do Proxmark.
 - Simplifica o processo de conversão de arquivos de Dump Mifare, tornando mais fácil analisar os dados extraídos de cartões Mifare.
 
+- ###Atenção: Preste atenção no modelo de dump retirado do MCTools, ele deve ser igual o "ExemploModeloDeDump.mct" que disponibilizei!
+
+
 
 
 
